@@ -6,16 +6,22 @@ const typeDefs = gql`
         interestingURLs: [String],
         firstName: String,
         email: String,
-        pets: [String]
+        pets: [String],
+        randomDiceThrow: Int,
     }
 `;
+
+function randomDiceThrow(number) {
+    return Math.ceil(Math.random()*number)
+}
 
 const data = {
     greeting: "Hello World!",
     interestingURLs: ["https://kursreacta.pl", "www.medium.com"],
     firstName: "John",
     email: "john@example.com",
-    pets: ["Mittens", "Doggo", "Birb"]
+    pets: ["Mittens", "Doggo", "Birb"],
+    randomDiceThrow: randomDiceThrow(6),
 }
 
 const server = new ApolloServer({typeDefs, rootValue: data, playground:true, introspection:true});
