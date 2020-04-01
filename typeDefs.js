@@ -63,6 +63,10 @@ const typeDefs = gql`
         """
         unpredicTableC: [[Int!]!]!
         """
+        Random quote
+        """
+        randomQuote: RandomQuote!
+        """
         List of few inspiring quotes
         """
         fewRandomQuotes: [RandomQuote!]!

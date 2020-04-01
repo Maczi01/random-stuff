@@ -116,6 +116,8 @@ const rootValue = () => {
         };
     }
 
+    const getQuote = () => Quotes.getQuote();
+
     return {
         greeting: "Hello World!",
         interestingURLs: ["https://kursreacta.pl", "https://www.medium.com"],
@@ -134,6 +136,7 @@ const rootValue = () => {
         workdays: DAYS_OF_WEEK.slice(1, 6),
         unpredicTableB: setNullInArray(),
         unpredicTableC: setArrayIntoArray,
+        randomQuote: getQuote(),
         fewRandomQuotes: getFewRandomQuotes(),
         now: getCurrentTime(),
         direction: "NORTH",
